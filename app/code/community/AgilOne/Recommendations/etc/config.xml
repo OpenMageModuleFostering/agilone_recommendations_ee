@@ -10,7 +10,7 @@
 <config>
     <modules>
         <AgilOne_Recommendations>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </AgilOne_Recommendations>
     </modules>
     <global>
