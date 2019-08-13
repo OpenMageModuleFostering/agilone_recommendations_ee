@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<widgets>
+  <recommendations_u2p type="recommendations/widget_u2p">
+    <name>AgilOne U2P Recommendations</name>
+    <description type="desc">Customer product recommendations provided by AgilOne.</description>
+  </recommendations_u2p>
+</widgets>

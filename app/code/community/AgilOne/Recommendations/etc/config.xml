@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    AgilOne
+ * @package     AgilOne_Recommendations
+ * @copyright   Copyright (c) 2014 AgilOne (http://www.agilone.com/)
+ * @author      Richard Loerzel (rloerzel@lyonscg.com)
+ */
+-->
+<config>
+    <modules>
+        <AgilOne_Recommendations>
+            <version>1.0.0</version>
+        </AgilOne_Recommendations>
+    </modules>
+    <global>
+        <models>
+            <recommendations>
+                <class>AgilOne_Recommendations_Model</class>
+            </recommendations>
+        </models>
+        <helpers>
+            <recommendations>
+                <class>AgilOne_Recommendations_Helper</class>
+            </recommendations>
+        </helpers>
+        <resources>
+            <recommendations_setup>
+                <setup>
+                    <module>AgilOne_Recommendations</module>
+                </setup>
+            </recommendations_setup>
+        </resources>
+        <blocks>
+            <recommendations>
+                <class>AgilOne_Recommendations_Block</class>
+            </recommendations>
+            <enterprise_targetrule>
+                <rewrite>
+                    <catalog_product_list_upsell>AgilOne_Recommendations_Block_Catalog_Product_List_Upsell</catalog_product_list_upsell>
+                 </rewrite>
+            </enterprise_targetrule>
+        </blocks>
+    </global>
+    <frontend>
+        <routers>
+            <recommendations>
+                <use>standard</use>
+                <args>
+                    <module>AgilOne_Recommendations</module>
+                    <frontName>recommendations</frontName>
+                </args>
+            </recommendations>
+        </routers>
+        <events>
+            <sales_quote_add_item>
+                <observers>
+                    <recommendations_sales_quote_add_item>
+                        <type>singleton</type>
+                        <class>recommendations/observer</class>
+                        <method>updateProductIdCart</method>
+                    </recommendations_sales_quote_add_item>
+                </observers>
+            </sales_quote_add_item>
+             <sales_quote_item_delete_after>
+                <observers>
+                    <recommendations_sales_quote_item_delete_after>
+                        <type>singleton</type>
+                        <class>recommendations/observer</class>
+                        <method>updateProductIdCart</method>
+                    </recommendations_sales_quote_item_delete_after>
+                </observers>
+            </sales_quote_item_delete_after>
+            <catalogsearch_query_save_after>
+                <observers>
+                    <recommendations_catalogsearch_query_save_after>
+                        <type>singleton</type>
+                        <class>recommendations/observer</class>
+                        <method>captureSearch</method>
+                    </recommendations_catalogsearch_query_save_after>
+                </observers>
+            </catalogsearch_query_save_after>
+        </events>
+        <translate>
+            <modules>
+                <AgilOne_Recommendations>
+                    <files>
+                        <default>AgilOne_Recommendations.csv</default>
+                    </files>
+                </AgilOne_Recommendations>
+            </modules>
+        </translate>
+        <layout>
+            <updates>
+                <recommendations>
+                    <file>recommendations.xml</file>
+                </recommendations>
+            </updates>
+        </layout>
+    </frontend>
+    <default>
+        <agilone>
+            <general>
+                <enabled>1</enabled>
+                <base_url>api.agilone.com</base_url>
+                <api_key></api_key>
+                <api_secret></api_secret>
+                <tenant_id></tenant_id>
+                <source_id></source_id>
+                <webtag_id></webtag_id>
+                <force_https>1</force_https>
+                <brand_attribute>manufacturer</brand_attribute>
+                <log_level>0</log_level>
+            </general>
+            <pdp>
+                <title>You may also like . . .</title>
+                <limit>4</limit>
+                <cache_lifetime>3800</cache_lifetime>
+                <error_message>There are no recommendations to display.</error_message>
+            </pdp>
+            <widget>
+                <title>You may also like . . .</title>
+                <limit>4</limit>
+                <cache_lifetime>3800</cache_lifetime>
+                <error_message>There are no recommendations to display.</error_message>
+                <default_email>dummy@example.com</default_email>
+            </widget>
+        </agilone>
+    </default>
+</config>

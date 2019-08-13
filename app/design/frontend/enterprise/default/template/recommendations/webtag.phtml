@@ -1,0 +1,52 @@
+<?php if ($this->isEnabled()): ?>
+<script type='text/javascript'>
+var _a1as = _a1as || [];
+_a1as.push(["init","<?php echo $this->getWebTagId() ?>"]); 
+<?php if ($userId = $this->getUserId()):?>
+_a1as.push(["setvar","userid","<?php echo $userId ?>"]);
+<?php endif?>
+<?php if ($email = $this->getEmail()):?>
+_a1as.push(["setvar","email","<?php echo $email ?>"]);
+<?php endif?>
+<?php if ($product = $this->getProductView()):?>
+_a1as.push(["setvar","productid_view","<?php echo $product->getProductId() ?>"]);
+<?php if ($brandId = $product->getBrandId()): ?>
+_a1as.push(["setvar","brandid_view","<?php echo $brandId ?>"]);
+<?php endif?>
+<?php endif?>
+<?php if ($categoryId = $this->getCategoryIdView()):?>
+_a1as.push(["setvar","categoryid_view","<?php echo $categoryId ?>"]);
+<?php endif?>
+<?php if ($productIds = $this->getProductIdCart()):?>
+_a1as.push(["setvar","productid_cart","<?php echo trim($productIds) ?>"]);
+<?php endif ?>
+<?php if ($keyword = $this->getOnsiteSearch()):?>
+_a1as.push(["setvar","onsitesearch","<?php echo $keyword ?>"]);
+<?php endif ?>
+<?php 
+if ($order = $this->getOrder()) {
+if (!is_numeric($userId)) { ?>
+_a1as.push(["setvar","userid","<?php echo $order->getCustomerId() ?>"]);
+<?php }
+if (!$email = $this->getEmail()) {?>
+_a1as.push(["setvar","email","<?php echo $order->getCustomerEmail() ?>"]);
+<?php }?>
+_a1as.push(["setvar","orderid","<?php echo $order->getOrderId() ?>"]);
+_a1as.push(["setvar","productid_order","<?php echo $order->getProductIdOrder() ?>"]);
+_a1as.push(["setvar","ordertotal","<?php echo number_format($order->getOrderTotal(),2) ?>"]);
+<?php } ?>
+_a1as.push(["track"]);
+ </script>
+ <script type='text/javascript'>
+(function() { 
+var a1s = document.createElement('script');  
+a1s.type = 'text/javascript';  
+a1s.async = true;  
+a1s.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'tr-1.agilone.com/tr-as.js';
+var a1ss = document.getElementsByTagName('script')[0];  
+a1ss.parentNode.insertBefore(a1s, a1ss); 
+})(); 
+</script> 
+<?php else:?>
+<!-- AgilOne_Recommendations module has been disabled in the Magento admin -->
+<?php endif?>

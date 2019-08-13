@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    AgilOne
+ * @package     AgilOne_Recommendations
+ * @copyright   Copyright (c) 2014 AgilOne (http://www.agilone.com/)
+ * @author      Richard Loerzel (rloerzel@lyonscg.com)
+ */
+-->
+<config>
+    <modules>
+        <AgilOne_Recommendations>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Enterprise_TargetRule/>
+            </depends>
+        </AgilOne_Recommendations>
+    </modules>
+</config>

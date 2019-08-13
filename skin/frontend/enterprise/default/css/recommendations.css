@@ -1,0 +1,21 @@
+#ordergroove-upsell { padding:10px 0px 0px 15px; border-top:1px solid #e5dcc3;background-color:#ffffff;}
+#ordergroove-upsell .widget-box .box-title h2 { font-weight:bold; font-size:15px; color:#e26703; padding:0; margin:0 0 2px 0; text-align:left;}
+#ordergroove-upsell .widget-box { min-height:240px; margin:0; }
+#ordergroove-upsell .widget-box .widget-grid .item { float:left; width:138px;padding:4px;margin:4px;border:1px solid #e5dcc3; }
+#ordergroove-upsell .widget-box .widget-grid .product-image {width:100px;height:135px;display:block; margin-left:auto;margin-right:auto;margin-bottom:10px;}
+#ordergroove-upsell .widget-box .widget-grid .product-name { /*min-height:2.7em;*/ margin:0 0 5px; font-weight:bold; font-size:13px; color:#203548; text-align:center;}
+#ordergroove-upsell .widget-box .widget-grid .product-name a { color:#203548; }
+#ordergroove-upsell .widget-box .widget-grid .price-box { margin:5px 0; text-align:center;}
+#ordergroove-upsell .widget-box .widget-grid .availability { line-height:21px; }
+#ordergroove-upsell .widget-box .widget-grid .actions { position:absolute; bottom:12px; }
+
+#ordergroove-widget { display:inline-block; padding:25px;}
+#ordergroove-widget .widget-box .box-title h2 { font-weight:bold; font-size:15px; color:#e26703; padding:0 0 1px; text-align:left;margin:0;}
+#ordergroove-widget .widget-box { min-height::260px; margin:0; }
+#ordergroove-widget .widget-box .widget-grid .item { float:left; width:138px;padding:4px;margin:4px;border:1px solid #e5dcc3; }
+#ordergroove-widget .widget-box .widget-grid .product-image {width:100px;height:135px;display:block; margin-left:auto;margin-right:auto;margin-bottom:10px;}
+#ordergroove-widget .widget-box .widget-grid .product-name { /*min-height:2.7em;*/ margin:0 0 5px; font-weight:bold; font-size:13px; color:#203548; text-align:center;}
+#ordergroove-widget .widget-box .widget-grid .product-name a { color:#203548; }
+#ordergroove-widget .widget-box .widget-grid .price-box { margin:5px 0; text-align:center;}
+#ordergroove-widget .widget-box .widget-grid .availability { line-height:21px; }
+#ordergroove-widget .widget-box .widget-grid .actions { position:absolute; bottom:12px; }

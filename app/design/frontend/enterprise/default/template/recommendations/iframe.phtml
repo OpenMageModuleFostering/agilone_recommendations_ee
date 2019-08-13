@@ -1,0 +1,10 @@
+<iframe src="" id="a1iframe" width="1" height="1" frameborder="0" ></iframe>
+<script type='text/javascript'>
+document.observe("dom:loaded", function() {
+    if ($("billing-buttons-container") != undefined) {
+        $("billing-buttons-container").on("click", "button.validation-passed", function() {
+            $('a1iframe').src = "<?php echo $this->_getUrl() ?>";
+        });
+    }
+});
+</script>

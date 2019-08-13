@@ -1,0 +1,204 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <agilone translate="label" module="recommendations">
+             <label><![CDATA[<img src="https://app.agilone.com/images/logo-a1-60x60.png" alt="AgilOne Logo" style="width:20px;height:20px;padding-right:3px;position:relative;top:+4px;" />AgilOne Recommendations]]></label>
+            <tab>customer</tab>
+            <sort_order>1</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general>
+                    <label>Account Settings</label>
+                    <comment><![CDATA[<h3>How does AgilOne work?</h3><p><strong>Now marketers, large and small, can boost revenues, improve marketing returns and transform their businesses without the need for in-house data scientists or ongoing IT involvement. AgilOne has been described as the perfect marriage between Machine Learning and Human Intelligence. When you sign up for AgilOne, you will also be supported by the best data scientists and marketing experts in the business. We are here to help!</strong><br/><br/><a href="https://app.agilone.com/metrics" target="_blank">Customer Login</a></span> | <a href="https://agilone.zendesk.com/hc/en-us" target="_blank">Knowledge Base</a></p><br/><br/>]]></comment>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Enable Module</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <base_url translate="label">
+                            <label>Base URL</label>
+                            <comment><![CDATA[Base URL for API (i.e. "api.agilone.com")]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </base_url>
+                        <api_key translate="label">
+                            <label>A1 Access Key Id</label>
+                            <comment><![CDATA[SHA256 (AES) Public Key.]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </api_key>
+                        <api_secret translate="label">
+                            <label>A1 Secret Access Key</label>
+                            <comment><![CDATA[SHA256 (AES) Secret Key.]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </api_secret>
+                        <tenant_id translate="label">
+                            <label>Tenant ID (OPTIONAL)</label>
+                            <comment><![CDATA[The TenantID is an ID specific to your workspace. If on app.agilone.com, you only have access to one workspace (the most common case) the tenant value is optional in API calls.]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </tenant_id>
+                        <source_id translate="label">
+                            <label>Source ID</label>
+                             <comment><![CDATA[The SourceID is an ID specific to your data sources. You may have several of them if AgilOne manage different customer or product databases for you. The {sourceid} parameter makes sure that the {customerkey} or {productkey} you're supplying is unique.]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </source_id>
+                        <webtag_id translate="label">
+                            <label>WebTag ID</label>
+                            <comment><![CDATA[ID provided with AgilOne WebTag account]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </webtag_id>
+                        <force_https translate="label">
+                            <label>Force HTTPS</label>
+                            <comment><![CDATA[Use HTTP or HTTPS for API access. NOTE: AgilOne's API enforces SSL on all connections by default. ]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </force_https>
+                        <brand_attribute translate="label">
+                            <label>Brand Attribute</label>
+                            <comment><![CDATA[Magento product attribute to represent the AgilOne 'brand' attribute in API calls.]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>recommendations/adminhtml_system_config_source_brand</source_model>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </brand_attribute>
+                        <log_level>
+                            <label>Log Level</label>
+                            <comment><![CDATA[Debug Logging Level.]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>recommendations/adminhtml_system_config_source_log</source_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </log_level>
+                    </fields>
+                </general>
+                <pdp>
+                    <label>P2P Product Detail Page Recommendations</label>
+                    <comment><![CDATA[<p><strong>Settings for P2P product recommendations block on PDP page (i.e. "catalog_product_view"). Replaces product upsell content block.</strong><br/><br/></p>]]></comment>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <title translate="label">
+                            <label>Title</label>
+                            <comment><![CDATA[P2P block header title.]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title>
+                        <limit translate="label">
+                            <label>Number of Recommendations Returned</label>
+                            <comment><![CDATA[Maximum number of P2P recommendations to return from API.]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </limit>
+                        <cache_lifetime translate="label">
+                            <label>Cache Lifetime (seconds)</label>
+                            <comment><![CDATA[Caching expiration seconds from current timestamp for P2P recommendations]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cache_lifetime>
+                    </fields>
+                </pdp>
+                <widget>
+                    <label>U2P Widget Recommendations</label>
+                    <comment><![CDATA[<p><strong>Settings for the U2P user product recommendation widget.</strong><br/><br/></p>]]></comment>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>30</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <title translate="label">
+                            <label>Title</label>
+                            <comment><![CDATA[U2P block header title.]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title>
+                        <limit translate="label">
+                            <label>Number of Recommendations Returned</label>
+                            <comment><![CDATA[Maximum number of U2P recommendations to return from API.]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </limit>
+                        <cache_lifetime translate="label">
+                            <label>Cache Lifetime (seconds)</label>
+                            <comment><![CDATA[Caching expiration seconds from current timestamp for U2P recommendations]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cache_lifetime>
+                        <default_email translate="label">
+                            <label>Default Email for Guests</label>
+                            <comment><![CDATA[Default email address to use for customers who aren't logged in.]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </default_email>
+                    </fields>
+                </widget>
+            </groups>
+        </agilone>
+    </sections>
+</config>

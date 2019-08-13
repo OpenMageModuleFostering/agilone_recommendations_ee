@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    AgileOne
+ * @package     AgileOne_Recommendations
+ * @copyright   Copyright (c) 2014 AgilOne (http://www.agilone.com/)
+ * @author      Richard Loerzel (rloerzel@lyonscg.com)
+ */
+ -->
+<layout version="1.0.0">
+    <default>
+        <reference name="head">
+            <action method="addItem">
+               <type>skin_css</type>
+               <name>css/recommendations.css</name>
+           </action>
+        </reference>
+        <reference name="before_body_end">
+            <block type="recommendations/webtag" name="agilone.recommendations.webtag" as="agilone.recommendations.webtag" template="recommendations/webtag.phtml" />
+            <block type="recommendations/iframe" name="agilone.recommendations.iframe" as="agilone.recommendations.iframe" template="recommendations/iframe.phtml" />
+        </reference>
+    </default>
+    <catalog_product_view>
+        <reference name="product.info">
+            <block type="recommendations/catalog_product_list_upsell" name="product.info.upsell" as="upsell_products" template="recommendations/catalog/product/list/upsell.phtml">
+                <action method="setColumnCount"><columns>4</columns></action>
+                <block type="recommendations/catalog_product_list_upsell_item" name="recommendations.catalog.product.list.upsell.item" template="recommendations/catalog/product/list/upsell/item.phtml" />
+            </block>
+        </reference>
+    </catalog_product_view>
+</layout>
