@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/AgilOne_Recommendations_EE",
+    "name": "OpenMageModuleFostering\/AgilOne_Recommendations_EE",
     "type": "magento-module",
     "license": "OSL-v3.0",
     "homepage": "",
     "description": "AgilOne Predictive Marketing Module for Magento Enterprise Edition",
     "authors": [
-    {
-        "name": "Joe Mancini",
-        "email": "joe.mancini@agilone.com"
-    }
-],
+        {
+            "name": "Joe Mancini",
+            "email": "joe.mancini@agilone.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
